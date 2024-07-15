@@ -8,18 +8,19 @@ import com.schalljan.utils.stream.JsonStreamHandler;
 import junit.framework.TestCase;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.List;
 
 public class ChatCompletionTest extends TestCase {
     public void testGetResponse() {
         Ollama host = new Ollama("http://localhost:11434");
+
+        List<Message> messages = List.of(new Message(ChatRoles.USER, "Why's the blue?"),
+                new Message(ChatRoles.ASSISTANT, "[ANSWER]"),
+                new Message(ChatRoles.USER, "Okay, but can you explain the phenomena in simple words?"));
         ChatCompletion completion = new ChatCompletion.Builder(host)
-                .setModel("llava")
+                .setModel("phi3")
                 .setStreaming(false)
-                .setMessages(List.of(new Message(ChatRoles.USER, "What do you see on this picture?",
-                                List.of(new File("C:\\Users\\Jan Schall\\Pictures\\Wallpaper.jpg")))))
+                .setMessages(messages)
                 .build();
         ChatResponse response = completion.execute().getResponse();
         System.out.println(response.getContent());

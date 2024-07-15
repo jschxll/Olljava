@@ -95,55 +95,38 @@ public class Model {
     }
 
     public static class Details {
-        private String format, parent_model, family, parameter_size, quantization_level;
+        private String format;
+        @JsonProperty("parent_model")
+        private String parentModel;
+        private String family;
+        @JsonProperty("parameter_size")
+        private String parameterSize;
+        @JsonProperty("quantization_level")
+        private String quantizationLevel;
         private List<String> families;
 
         public String getFormat() {
             return format;
         }
 
-        public void setFormat(String format) {
-            this.format = format;
-        }
-
-        public String getParent_model() {
-            return parent_model;
-        }
-
-        public void setParent_model(String parent_model) {
-            this.parent_model = parent_model;
+        public String getParentModel() {
+            return parentModel;
         }
 
         public String getFamily() {
             return family;
         }
 
-        public void setFamily(String family) {
-            this.family = family;
+        public String getParameterSize() {
+            return parameterSize;
+        }
+
+        public String getQuantizationLevel() {
+            return quantizationLevel;
         }
 
         public List<String> getFamilies() {
             return families;
-        }
-
-        public void setFamilies(List<String> families) {
-            this.families = families;
-        }
-
-        public String getParameter_size() {
-            return parameter_size;
-        }
-
-        public void setParameter_size(String parameter_size) {
-            this.parameter_size = parameter_size;
-        }
-
-        public String getQuantization_level() {
-            return quantization_level;
-        }
-
-        public void setQuantization_level(String quantization_level) {
-            this.quantization_level = quantization_level;
         }
 
         @Override
@@ -152,8 +135,8 @@ public class Model {
                     "format='" + format + '\'' +
                     ", family='" + family + '\'' +
                     ", families='" + families + '\'' +
-                    ", parameter_size='" + parameter_size + '\'' +
-                    ", quantization_level='" + quantization_level + '\'' +
+                    ", parameter_size='" + parameterSize + '\'' +
+                    ", quantization_level='" + quantizationLevel + '\'' +
                     '}';
         }
     }
