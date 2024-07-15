@@ -15,7 +15,7 @@ public class OllamaTest extends TestCase {
     public void testGetModels() throws IOException {
         Ollama host = new Ollama("http://localhost:11434");
         List<Model> models = host.getModels();
-        assertEquals("llava:latest", models.get(0).getName());
+        assertEquals("Mario:latest", models.get(0).getName());
     }
 
     public void testGetRunningModels() throws IOException {
@@ -38,7 +38,7 @@ public class OllamaTest extends TestCase {
 
     public void testDeleteModel() throws IOException {
         Ollama host = new Ollama("http://localhost:11434");
-        host.deleteModel("Mario");
+        host.deleteModel("phi3_copy");
     }
 
     public void testGenerateEmbeddings() throws IOException {

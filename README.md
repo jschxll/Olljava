@@ -55,7 +55,7 @@ Such a request can look like the following:
 
 ````
 Ollama host = new Ollama("http://localhost:11434");
-List<Message> messages = List.of(new Message(ChatRoles.USER, "Why's the blue?"),
+List<Message> messages = List.of(new Message(ChatRoles.USER, "Why's the sky blue?"),
     new Message(ChatRoles.ASSISTANT, "[ANSWER]"),
     new Message(ChatRoles.USER, "Okay, but can you explain me the phenomena in simpler terms?"));
 
