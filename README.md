@@ -48,8 +48,8 @@ with ``setStreaming(false)`` in your ChatCompletion or OllamaCompletion builder 
 
 ### Generating a chat completion
 
-Another option to receive a response from the Ollama API is via a chat completion. It differentiates itself from a '
-normal completion, since it allows a complete chat history in the sent JSON, so the user can mention and access
+Another option to receive a response from the Ollama API is via a chat completion. It differentiates itself from a "
+normal" completion, since it allows a complete chat history in the sent JSON, so the user can mention and access
 requests and responses from previous conversations.
 Such a request can look like the following:
 
@@ -69,8 +69,7 @@ System.out.println(response.getContent());
 ````
 
 Additionally, it's possible to add images to a Message, as well as a system prompt. Each Message need a specific role,
-like "user", "assistant" and "system", in order to let the LLM know, how the previous chat looked like and where to
-answer prompts.
+like "user", "assistant" and "system", in order to let the LLM know, how the previous chat looked like and how it can consider it in the next response.
 
 ### Interacting with Ollama utilities
 
@@ -133,7 +132,7 @@ System.out.println(embeddings);
 
 ### Create custom models
 
-If you want to build your own model with a custom modelfile, you create a Modelfile, in which you write the modified
+If you want to build your own model with a custom modelfile, you have to create a Modelfile, in which you write the modified
 parameters. You can find
 help [here](https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values), if you don't know
 where to start. <br>
@@ -145,7 +144,7 @@ ModelFileReader reader = new ModelFileReader("[PATH TO YOUR MODELFILE]");
 host.createModel("[NAME]", reader.getModelFileContent());
 ````
 
-If you want to stream the response you can do modify the code like this:
+If you want to stream the response you can modify the code like this:
 
 ````
 Ollama host = new Ollama("http://localhost:11434");
