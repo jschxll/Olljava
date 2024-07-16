@@ -10,6 +10,14 @@ Olljava is a minimal and easy to use Java library for the Ollama API.
 - [Create custom models](#create-custom-models)
 - [Classes and Interfaces](#classes-and-interfaces)
 
+````
+<dependency>
+    <groupId>io.github.j-schall</groupId>
+    <artifactId>Olljava</artifactId>
+    <version>1.0.0</version>
+</dependency>
+````
+
 ### Generating a completion
 
 There are two ways of receiving a response from a given model:

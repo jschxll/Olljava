@@ -15,7 +15,7 @@ public class OllamaTest extends TestCase {
     public void testGetModels() throws IOException {
         Ollama host = new Ollama("http://localhost:11434");
         List<Model> models = host.getModels();
-        assertEquals("Mario:latest", models.get(0).getName());
+        assertEquals("phi3_copy", models.get(0).getName());
     }
 
     public void testGetRunningModels() throws IOException {
