@@ -167,3 +167,5 @@ host.createModel("[NAME]", reader.getModelFileContent(), new StreamHandler());
 | Message.java            | Represents a message element in the JSON for a chat completion. With it you can build chat histories containing a role, a content String and optionally a list of pictures.                                                                                          | getRole() </br> setRole(String role) </br> getContent() </br> setContent(String content) </br> setImages(List<File> images) </br> hasImages()                                                                                                                                                   |
 
 #### You want more details and options? Visit the [official Ollama docs](https://github.com/ollama/ollama/blob/main/docs/api.md).
+**INFO**<br/>
+This project uses the [Jackson library](https://github.com/FasterXML/jackson) licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html) and contributed by FasterXML.
