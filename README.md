@@ -28,7 +28,7 @@ There are two ways of receiving a response from a given model:
 Here is a simple example given, which shows how a simple completion can be implemented:
 
 ````
-Ollama host = new Ollama(new URL("http://localhost:11434"));
+Ollama host = new Ollama("http://localhost:11434");
 OllamaCompletion completion = new OllamaCompletion.Builder(host, new StreamHandler())
     .setModel("llama3")
     .setPrompt("Why's the sky blue?");
